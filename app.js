@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use("client",express.static(path.join(__dirname, 'client/build')));
 
 var corsOptions = {
-  origin: 'https://ashesihub.firebaseapp.com',
+  origin: false,
   allowedHeaders:"*",
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
 }

@@ -7,7 +7,7 @@ var bodyParser = require('body-parser');
 
 var api = require('./routes/api')
 var job = require('./controllers/cronjob')
-//var cors = require('cors')
+var cors = require('cors')
 var app = express();
 
 // view engine setup
@@ -31,7 +31,7 @@ var corsOptions = {
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
 }
 
-// app.use(cors(corsOptions)) 
+app.use(cors(corsOptions)) 
 
 app.use('/api', api);
 

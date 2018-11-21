@@ -27,8 +27,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use("client",express.static(path.join(__dirname, 'client/build')));
 
 var corsOptions = {
-  origin: false,
-  allowedHeaders:"*",
+  origin: "*",
+  //allowedHeaders:"*",
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204 
 }
 
